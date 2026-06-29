@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://3nik0c2w6n4r"]
+
+[ext_resource type="Script" uid="uid://bwwsqa5ab10s" path="res://Scripts/Scene Change Button Test.gd" id="1_680os"]
+
+[node name="Test2" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_680os")
