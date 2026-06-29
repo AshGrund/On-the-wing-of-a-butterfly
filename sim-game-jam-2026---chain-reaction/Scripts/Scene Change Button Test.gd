@@ -1,7 +1,7 @@
 extends Control
 
 @export_category("Scene Change Button")
-@export var scene:int
+@export var scene:String
 
 func _ready():
 	var button = Button.new()

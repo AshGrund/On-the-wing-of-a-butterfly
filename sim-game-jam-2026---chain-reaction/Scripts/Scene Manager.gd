@@ -1,7 +1,7 @@
 extends Node
 
 var dir := DirAccess.open("res://Scenes")
-var scenes = []
+var scenes:Dictionary
 var currentScene:Node
 
 
@@ -14,10 +14,11 @@ func _ready():
 	# load all the files and add them to the scenes array for later use
 	for file: String in dir.get_files():
 		var scene := load(dir.get_current_dir() + "/" + file)
-		scenes.append(scene)
+		print(file + "test")
+		scenes[file.replace(".tscn", "")] = scene
 	
 	# load the starting scene (change number as needed)
-	SwitchScene(0)
+	SwitchScene("Test 1")
 
 # deleting the currently shown scene and instantiating the next one
 func SwitchScene(scene):
