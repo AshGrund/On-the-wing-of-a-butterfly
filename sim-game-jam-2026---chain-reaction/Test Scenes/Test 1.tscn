@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmgrnwny04nmo"]
 
-[ext_resource type="Script" uid="uid://bwwsqa5ab10s" path="res://Scripts/Scene Change Button Test.gd" id="1_orvit"]
+[ext_resource type="Script" uid="uid://bwwsqa5ab10s" path="res://Scripts/Scene Change Button Test.gd" id="1_07o7g"]
 
 [node name="Test1" type="Node2D"]
 
@@ -9,5 +9,5 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_orvit")
+script = ExtResource("1_07o7g")
 scene = "Test 2"
