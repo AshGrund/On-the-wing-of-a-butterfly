@@ -43,12 +43,12 @@ func SwitchScene(scene):
 		variables.save(saveDir.get_current_dir() + "/" + saveName + ".cfg")
 	
 		# delete current scene
-		if(currentScene):
+	if(currentScene):
 			currentScene.queue_free()
 	
-		# initialize new scene and make them a child of this object
-		currentScene = scenes[scene].instantiate()
-		self.add_child(currentScene)
+	# initialize new scene and make them a child of this object
+	currentScene = scenes[scene].instantiate()
+	self.add_child(currentScene)
 
 func GetVariable(scene, object):
 	if saveName:

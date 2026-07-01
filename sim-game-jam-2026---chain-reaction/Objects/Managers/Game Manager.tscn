@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://xa2u7la1t1d7"]
+
+[ext_resource type="PackedScene" uid="uid://d2sceje6cywor" path="res://Objects/Managers/Scene Manager.tscn" id="1_kqt86"]
+[ext_resource type="PackedScene" uid="uid://cqdxbn5eilw4k" path="res://Objects/Managers/Sound Manager.tscn" id="2_r74ft"]
+
+[node name="GameManager" type="Node2D"]
+
+[node name="SceneManager" parent="." instance=ExtResource("1_kqt86")]
+
+[node name="SoundManager" parent="." instance=ExtResource("2_r74ft")]

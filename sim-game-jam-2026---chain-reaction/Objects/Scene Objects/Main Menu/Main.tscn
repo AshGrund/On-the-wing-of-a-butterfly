@@ -1,7 +1,62 @@
-[gd_scene format=3 uid="uid://cehs37m4iolge"]
+[gd_scene load_steps=5 format=3 uid="uid://cehs37m4iolge"]
+
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="1_sc1hi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_totqd"]
+bg_color = Color(0.695531, 0.791923, 0.892428, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_sc1hi"]
+subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_sc1hi"]
+base_font = SubResource("SystemFont_sc1hi")
 
 [node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Panel" type="Panel" parent="."]
+light_mask = 1023
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_totqd")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.935784, 0.672668, 0.54208, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_sc1hi")
+theme_override_font_sizes/normal_font_size = 78
+text = "On the wing of a butterfly"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Start"
+script = ExtResource("1_sc1hi")
+scene = "Prison Room"
+
+[node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+script = ExtResource("1_sc1hi")
+who = "/MainMenu"
+scene = "Settings"

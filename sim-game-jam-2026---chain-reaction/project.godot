@@ -11,5 +11,12 @@ config_version=5
 [application]
 
 config/name="SIM Game Jam 2026 - Chain Reaction"
+run/main_scene="uid://xa2u7la1t1d7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
