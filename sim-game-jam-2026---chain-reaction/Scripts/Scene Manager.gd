@@ -14,7 +14,8 @@ var variables := ConfigFile.new()
 # loads all the scenes in advance so that they can be instantiated later on
 func _ready():
 	sceneDir = DirAccess.open(sceneDirName)
-	# get all the files in the scene folder
+	
+	# can I open this folder
 	if sceneDir == null: printerr("Could not open the Scenes folder"); return
 	sceneDir.list_dir_begin()
 	
@@ -53,7 +54,7 @@ func SwitchScene(scene = loadFirstName):
 func GetVariable(scene, object):
 	if saveName:
 		if !variables.get_value(object, scene):
-			variables.set_value(scene, object, 0)
+			variables.set_value(object, scene, 0)
 	
 		return variables.get_value(object, scene)
 

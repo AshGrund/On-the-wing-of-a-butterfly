@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqbs3ucriyrib"]
+[gd_scene load_steps=10 format=3 uid="uid://bqbs3ucriyrib"]
 
 [ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_i32k0"]
 [ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="2_fv5oi"]
 [ext_resource type="Texture2D" uid="uid://6vgfi6k1npe0" path="res://Textures/UI/navigation_w.png" id="3_xi4o7"]
 [ext_resource type="Texture2D" uid="uid://bvhp4encgi3h0" path="res://Textures/UI/navigation_e.png" id="4_guvpp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_i32k0"]
+size = Vector2(532, 265)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fv5oi"]
+size = Vector2(860, 279)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xi4o7"]
+size = Vector2(401, 593)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_guvpp"]
+size = Vector2(401, 425)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e00qc"]
+size = Vector2(250, 313)
 
 [node name="ZoomedOut" type="Control"]
 layout_mode = 3
@@ -25,6 +40,7 @@ script = ExtResource("2_fv5oi")
 scene = "Prison Room"
 
 [node name="Kitchen" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = -29.0
 offset_top = 634.0
 offset_right = 3.0
@@ -35,6 +51,7 @@ script = ExtResource("2_fv5oi")
 scene = "Kitchen"
 
 [node name="Hallway" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1783.0
 offset_top = 628.0
 offset_right = 1815.0
@@ -43,3 +60,58 @@ scale = Vector2(5, 5)
 texture_normal = ExtResource("4_guvpp")
 script = ExtResource("2_fv5oi")
 scene = "Hallway"
+
+[node name="TV" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 702.0
+offset_top = 31.0
+offset_right = 1234.0
+offset_bottom = 296.0
+texture_normal = SubResource("PlaceholderTexture2D_i32k0")
+script = ExtResource("2_fv5oi")
+who = "/LivingRoom"
+scene = "TV"
+
+[node name="Couch" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 539.0
+offset_top = 451.0
+offset_right = 1399.0
+offset_bottom = 730.0
+texture_normal = SubResource("PlaceholderTexture2D_fv5oi")
+script = ExtResource("2_fv5oi")
+who = "/LivingRoom"
+scene = "Couch"
+
+[node name="Cabinet" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 1472.0
+offset_top = -3.0
+offset_right = 1873.0
+offset_bottom = 590.0
+texture_normal = SubResource("PlaceholderTexture2D_xi4o7")
+script = ExtResource("2_fv5oi")
+who = "/LivingRoom"
+scene = "Cabinets"
+
+[node name="Arm Chair" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 211.0
+offset_top = 173.0
+offset_right = 612.0
+offset_bottom = 598.0
+texture_normal = SubResource("PlaceholderTexture2D_guvpp")
+script = ExtResource("2_fv5oi")
+who = "/LivingRoom"
+scene = "Arm Chair"
+
+[node name="Table" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 252.0
+offset_top = 382.0
+offset_right = 502.0
+offset_bottom = 695.0
+texture_normal = SubResource("PlaceholderTexture2D_e00qc")
+script = ExtResource("2_fv5oi")
+who = "/LivingRoom"
+scene = "Table"

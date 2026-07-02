@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://hfqujdvdob3p"]
+[gd_scene load_steps=8 format=3 uid="uid://hfqujdvdob3p"]
 
 [ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_chjbg"]
 [ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="2_hxpp2"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_chjbg"]
+size = Vector2(717, 379)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hxpp2"]
+size = Vector2(522, 792)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a43y3"]
+size = Vector2(607, 856)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0jv0e"]
+size = Vector2(1199, 379)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jyk4m"]
+size = Vector2(306, 330)
 
 [node name="ZoomedOut" type="Control"]
 layout_mode = 3
@@ -12,6 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Living Room" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 867.0
 offset_top = 919.0
 offset_right = 899.0
@@ -20,3 +36,58 @@ scale = Vector2(5, 5)
 texture_normal = ExtResource("1_chjbg")
 script = ExtResource("2_hxpp2")
 scene = "Living Room"
+
+[node name="Counter" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 602.0
+offset_top = 411.0
+offset_right = 1319.0
+offset_bottom = 790.0
+texture_normal = SubResource("PlaceholderTexture2D_chjbg")
+script = ExtResource("2_hxpp2")
+who = "/Kitchen"
+scene = "Counter"
+
+[node name="Fridge" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 1315.0
+offset_top = 3.0
+offset_right = 1837.0
+offset_bottom = 795.0
+texture_normal = SubResource("PlaceholderTexture2D_hxpp2")
+script = ExtResource("2_hxpp2")
+who = "/Kitchen"
+scene = "Fridge"
+
+[node name="Kitchen Table" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 349.0
+offset_right = 602.0
+offset_bottom = 1205.0
+texture_normal = SubResource("PlaceholderTexture2D_a43y3")
+script = ExtResource("2_hxpp2")
+who = "/Kitchen"
+scene = "Kitchen Table"
+
+[node name="Cupboards" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 117.0
+offset_top = -254.0
+offset_right = 1316.0
+offset_bottom = 125.0
+texture_normal = SubResource("PlaceholderTexture2D_0jv0e")
+script = ExtResource("2_hxpp2")
+who = "/Kitchen"
+scene = "Cupboards"
+
+[node name="Coffee Machine" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 973.0
+offset_top = 163.0
+offset_right = 1279.0
+offset_bottom = 493.0
+texture_normal = SubResource("PlaceholderTexture2D_jyk4m")
+script = ExtResource("2_hxpp2")
+who = "/Kitchen"
+scene = "Coffee Machine"

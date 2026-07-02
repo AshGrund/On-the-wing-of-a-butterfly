@@ -11,8 +11,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackToMain" parent="." instance=ExtResource("1_7pf0x")]
+layout_mode = 0
 offset_left = 832.0
 offset_top = 919.0
 offset_right = 864.0
 offset_bottom = 951.0
-who = "LivingRoom"
+who = "/LivingRoom"
