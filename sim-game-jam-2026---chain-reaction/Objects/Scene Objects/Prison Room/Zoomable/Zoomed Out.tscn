@@ -21,14 +21,29 @@ grow_vertical = 2
 
 [node name="Chair" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 689.0
-offset_top = 832.0
-offset_right = 1432.0
-offset_bottom = 1352.0
+offset_left = 734.0
+offset_top = 772.0
+offset_right = 1477.0
+offset_bottom = 1292.0
 texture_normal = SubResource("PlaceholderTexture2D_ib4jk")
 script = ExtResource("1_xvuds")
 who = "/PrisonRoom"
 scene = "Your Chair"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Chair"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = 28.0
+offset_right = -528.0
+offset_bottom = -122.0
+theme_override_font_sizes/normal_font_size = 72
+text = "Chair"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Desk" type="TextureButton" parent="."]
 layout_mode = 0
@@ -40,7 +55,23 @@ script = ExtResource("1_xvuds")
 who = "/PrisonRoom"
 scene = "The Desk"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Desk"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = 28.0
+offset_right = -75.0
+offset_bottom = -95.5
+theme_override_font_sizes/normal_font_size = 72
+text = "Desk"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Door" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1184.0
 offset_top = 4.0
 offset_right = 1744.0
@@ -49,3 +80,18 @@ texture_normal = SubResource("PlaceholderTexture2D_5rat1")
 script = ExtResource("1_xvuds")
 who = "/PrisonRoom"
 scene = "The Door"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Door"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = 28.0
+offset_right = -326.0
+offset_bottom = -97.5
+theme_override_font_sizes/normal_font_size = 72
+text = "Door"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://xa2u7la1t1d7"]
+[gd_scene load_steps=5 format=3 uid="uid://xa2u7la1t1d7"]
 
 [ext_resource type="PackedScene" uid="uid://d2sceje6cywor" path="res://Objects/Managers/Scene Manager.tscn" id="1_kqt86"]
+[ext_resource type="Script" uid="uid://dclm3c1hgvqu6" path="res://Scripts/Game Manager.gd" id="1_ukjjd"]
 [ext_resource type="PackedScene" uid="uid://cqdxbn5eilw4k" path="res://Objects/Managers/Sound Manager.tscn" id="2_r74ft"]
+[ext_resource type="PackedScene" uid="uid://t4vwq30oi3l8" path="res://Objects/UI/Pause Screen.tscn" id="3_r74ft"]
 
 [node name="GameManager" type="Node2D"]
+script = ExtResource("1_ukjjd")
 
 [node name="SceneManager" parent="." instance=ExtResource("1_kqt86")]
 
 [node name="SoundManager" parent="." instance=ExtResource("2_r74ft")]
+
+[node name="PauseScreen" parent="." instance=ExtResource("3_r74ft")]
+visible = false

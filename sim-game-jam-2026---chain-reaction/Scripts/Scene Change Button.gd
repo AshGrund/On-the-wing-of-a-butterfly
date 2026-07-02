@@ -8,4 +8,8 @@ func _ready():
 	self.pressed.connect(requestSceneChange)
 
 func requestSceneChange():
-	get_node("/root/GameManager/SceneManager" + who).SwitchScene(scene)
+	if scene:
+		get_node("/root/GameManager/SceneManager" + who).SwitchScene(scene)
+	else:
+		get_node("/root/GameManager/SceneManager" + who).SwitchScene()
+		

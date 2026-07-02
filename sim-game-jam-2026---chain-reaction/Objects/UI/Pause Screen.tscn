@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://t4vwq30oi3l8"]
+
+[ext_resource type="Script" uid="uid://bm6yv4470fr76" path="res://Scripts/Pause Button.gd" id="1_0ka7s"]
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="1_3ouch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ka7s"]
+bg_color = Color(0.521569, 0.662745, 0.807843, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_sc1hi"]
+subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_f80cf"]
+base_font = SubResource("SystemFont_sc1hi")
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 210.0
+offset_top = 165.0
+offset_right = 1710.0
+offset_bottom = 915.0
+pivot_offset = Vector2(750, 375)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ka7s")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.935784, 0.672668, 0.54208, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_f80cf")
+theme_override_font_sizes/normal_font_size = 78
+text = "Paused"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="Continue" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Continue"
+script = ExtResource("1_0ka7s")
+
+[node name="Main Menu" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Main Menu"
+script = ExtResource("1_3ouch")
+scene = "Main Menu"

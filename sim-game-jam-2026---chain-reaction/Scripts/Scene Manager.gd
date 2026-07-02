@@ -7,7 +7,7 @@ extends Node
 var sceneDir
 var saveDir := DirAccess.open("res://Saves")
 var scenes:Dictionary
-var currentScene:Node
+var currentScene:Array
 var variables := ConfigFile.new()
 
 
@@ -37,26 +37,26 @@ func _ready():
 	SwitchScene(loadFirstName)
 
 # save variables, delete the currently shown scene and instantiate the next one
-func SwitchScene(scene):
+func SwitchScene(scene = loadFirstName):
 	# save the variables
 	if saveName:
 		variables.save(saveDir.get_current_dir() + "/" + saveName + ".cfg")
 	
 		# delete current scene
 	if(currentScene):
-			currentScene.queue_free()
+			currentScene[1].queue_free()
 	
 	# initialize new scene and make them a child of this object
-	currentScene = scenes[scene].instantiate()
-	self.add_child(currentScene)
+	currentScene = [scene, scenes[scene].instantiate()]
+	self.add_child(currentScene[1])	
 
 func GetVariable(scene, object):
 	if saveName:
-		if !variables.get_value(scene, object):
-			variables.set_value(scene, object, "base")
+		if !variables.get_value(object, scene):
+			variables.set_value(scene, object, 0)
 	
-		return variables.get_value(scene, object)
+		return variables.get_value(object, scene)
 
 func ChangeVariable(scene, object, value):
 	if saveName:
-		variables.set_value(scene, object, value)
+		variables.set_value(object, scene, value)

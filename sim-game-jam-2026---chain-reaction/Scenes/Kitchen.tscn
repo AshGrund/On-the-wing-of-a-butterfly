@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://dq155gmirqicn"]
+[gd_scene load_steps=2 format=3 uid="uid://dq155gmirqicn"]
+
+[ext_resource type="Script" uid="uid://dnytc4if0kfef" path="res://Scripts/Scene Manager.gd" id="1_2v58e"]
 
 [node name="Kitchen" type="Node2D"]
+script = ExtResource("1_2v58e")
+sceneDirName = "res://Objects/Scene Objects/Kitchen"
+loadFirstName = "Zoomed Out"

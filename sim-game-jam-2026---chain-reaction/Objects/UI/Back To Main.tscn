@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw8qnyvstcals"]
+
+[ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_w434s"]
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="2_fkwqr"]
+
+[node name="BackToMain" type="TextureButton"]
+scale = Vector2(5, 5)
+texture_normal = ExtResource("1_w434s")
+script = ExtResource("2_fkwqr")
