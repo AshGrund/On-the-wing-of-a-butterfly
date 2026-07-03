@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1ekcmewgx6wh"]
+[gd_scene load_steps=14 format=3 uid="uid://d1ekcmewgx6wh"]
 
 [ext_resource type="Script" uid="uid://ch48mede0tqt4" path="res://Scripts/Managers/Scene Item Manager.gd" id="1_2l0rn"]
 [ext_resource type="PackedScene" uid="uid://cw8qnyvstcals" path="res://Objects/UI/Back To Main.tscn" id="1_hxsvy"]
+[ext_resource type="PackedScene" uid="uid://pjrde7g3immt" path="res://Objects/Items/Bills.tscn" id="3_fmsyl"]
+[ext_resource type="PackedScene" uid="uid://b6fg5uhpp24v7" path="res://Objects/Items/Bread.tscn" id="4_8hdd2"]
+[ext_resource type="PackedScene" uid="uid://bdo2711oqecv1" path="res://Objects/Items/Broken Keys.tscn" id="5_p5hs4"]
+[ext_resource type="PackedScene" uid="uid://ci5rsxl0dl2b4" path="res://Objects/Items/Cheese.tscn" id="6_2xnba"]
+[ext_resource type="PackedScene" uid="uid://c26sqk8tpsk3e" path="res://Objects/Items/Documents.tscn" id="7_rmo00"]
+[ext_resource type="PackedScene" uid="uid://da0kpwvx70w7p" path="res://Objects/Items/Eggs.tscn" id="8_jx2y4"]
+[ext_resource type="PackedScene" uid="uid://bunadqyuslgr0" path="res://Objects/Items/Keys.tscn" id="9_uo5kq"]
+[ext_resource type="PackedScene" uid="uid://bwr4aqxmm14yl" path="res://Objects/Items/Notepad.tscn" id="10_lvcyx"]
+[ext_resource type="PackedScene" uid="uid://hpsd08wq4air" path="res://Objects/Items/Phone.tscn" id="11_neua4"]
+[ext_resource type="PackedScene" uid="uid://b6k2eq43c7lhh" path="res://Objects/Items/Warning.tscn" id="12_odpxr"]
+[ext_resource type="PackedScene" uid="uid://ccmrc4fwygv5o" path="res://Objects/UI/Place Item Button.tscn" id="13_8hdd2"]
 
 [node name="Table" type="Control"]
 layout_mode = 3
@@ -19,3 +30,89 @@ offset_top = 919.0
 offset_right = 864.0
 offset_bottom = 951.0
 who = "/Hallway"
+
+[node name="Bills" parent="." instance=ExtResource("3_fmsyl")]
+visible = false
+layout_mode = 0
+offset_left = 356.0
+offset_top = 728.0
+offset_right = 498.0
+offset_bottom = 824.0
+
+[node name="Bread" parent="." instance=ExtResource("4_8hdd2")]
+visible = false
+layout_mode = 0
+offset_left = 1122.0
+offset_top = 495.0
+offset_right = 1322.0
+offset_bottom = 595.0
+
+[node name="Broken Keys" parent="." instance=ExtResource("5_p5hs4")]
+visible = false
+layout_mode = 0
+offset_left = 412.0
+offset_top = 558.0
+offset_right = 458.0
+offset_bottom = 638.0
+
+[node name="Cheese" parent="." instance=ExtResource("6_2xnba")]
+visible = false
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 657.0
+offset_right = 1232.0
+offset_bottom = 761.0
+
+[node name="Documents" parent="." instance=ExtResource("7_rmo00")]
+visible = false
+layout_mode = 0
+offset_left = 516.0
+offset_top = 327.0
+offset_right = 658.0
+offset_bottom = 423.0
+
+[node name="Eggs" parent="." instance=ExtResource("8_jx2y4")]
+visible = false
+layout_mode = 0
+offset_left = 877.0
+offset_top = 332.0
+offset_right = 1077.0
+offset_bottom = 432.0
+
+[node name="Keys" parent="." instance=ExtResource("9_uo5kq")]
+visible = false
+layout_mode = 0
+offset_left = 476.0
+offset_top = 558.0
+offset_right = 522.0
+offset_bottom = 638.0
+
+[node name="Notepad" parent="." instance=ExtResource("10_lvcyx")]
+visible = false
+layout_mode = 0
+offset_left = 933.0
+offset_top = 528.0
+offset_right = 1075.0
+offset_bottom = 624.0
+
+[node name="Phone" parent="." instance=ExtResource("11_neua4")]
+visible = false
+layout_mode = 0
+offset_left = 735.0
+offset_top = 528.0
+offset_right = 835.0
+offset_bottom = 728.0
+
+[node name="Warning" parent="." instance=ExtResource("12_odpxr")]
+visible = false
+layout_mode = 0
+offset_left = 921.0
+offset_top = 702.0
+offset_right = 1063.0
+offset_bottom = 798.0
+
+[node name="PlaceItemButton" parent="." instance=ExtResource("13_8hdd2")]
+offset_left = 1660.0
+offset_top = 1003.0
+offset_right = 1920.0
+offset_bottom = 1080.0

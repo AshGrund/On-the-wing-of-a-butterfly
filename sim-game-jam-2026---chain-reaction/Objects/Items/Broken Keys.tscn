@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdo2711oqecv1"]
+[gd_scene load_steps=3 format=3 uid="uid://bdo2711oqecv1"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_8xpv7"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8xpv7"]
+size = Vector2(46, 80)
+
 [node name="Broken Keys" type="TextureButton"]
+offset_right = 46.0
+offset_bottom = 80.0
+texture_normal = SubResource("PlaceholderTexture2D_8xpv7")
 script = ExtResource("1_8xpv7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 20.0
+offset_bottom = 37.0
+theme_override_font_sizes/normal_font_size = 27
+text = "B"
+fit_content = true

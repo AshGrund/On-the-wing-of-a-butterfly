@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://ch8fmbneh6qai"]
+[gd_scene load_steps=2 format=3 uid="uid://ch8fmbneh6qai"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pl1wy"]
+size = Vector2(150, 150)
 
 [node name="Bills" type="TextureRect"]
+texture = SubResource("PlaceholderTexture2D_pl1wy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 152.0
+offset_bottom = 43.0
+theme_override_font_sizes/normal_font_size = 29
+text = "Bills"

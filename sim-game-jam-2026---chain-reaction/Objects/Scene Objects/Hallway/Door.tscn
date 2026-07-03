@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxi0gop3n2lc5"]
+[gd_scene load_steps=2 format=3 uid="uid://dxi0gop3n2lc5"]
 
-[ext_resource type="Script" uid="uid://ch48mede0tqt4" path="res://Scripts/Managers/Scene Item Manager.gd" id="1_5x738"]
 [ext_resource type="PackedScene" uid="uid://cw8qnyvstcals" path="res://Objects/UI/Back To Main.tscn" id="1_jusy8"]
 
 [node name="Door" type="Control"]
@@ -10,7 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5x738")
 
 [node name="BackToMain" parent="." instance=ExtResource("1_jusy8")]
 layout_mode = 0

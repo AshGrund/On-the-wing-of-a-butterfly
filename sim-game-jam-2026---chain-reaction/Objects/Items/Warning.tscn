@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6k2eq43c7lhh"]
+[gd_scene load_steps=3 format=3 uid="uid://b6k2eq43c7lhh"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_vlvvp"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vlvvp"]
+size = Vector2(142, 96)
+
 [node name="Warning" type="TextureButton"]
+texture_normal = SubResource("PlaceholderTexture2D_vlvvp")
 script = ExtResource("1_vlvvp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 83.0
+offset_bottom = 37.0
+theme_override_font_sizes/normal_font_size = 27
+text = "Warn"
+fit_content = true

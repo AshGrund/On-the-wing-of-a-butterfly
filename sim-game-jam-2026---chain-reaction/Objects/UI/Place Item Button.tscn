@@ -3,5 +3,6 @@
 [ext_resource type="Script" uid="uid://b8cg3w1h6ylcn" path="res://Scripts/Buttons/Place Button.gd" id="1_ckrr2"]
 
 [node name="PlaceItemButton" type="Button"]
+theme_override_font_sizes/font_size = 50
 text = "Place Item"
 script = ExtResource("1_ckrr2")

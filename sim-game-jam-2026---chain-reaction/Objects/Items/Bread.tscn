@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6fg5uhpp24v7"]
+[gd_scene load_steps=3 format=3 uid="uid://b6fg5uhpp24v7"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_ta1e2"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ta1e2"]
+size = Vector2(200, 100)
+
 [node name="Bread" type="TextureButton"]
+offset_right = 110.0
+offset_bottom = 59.0
+texture_normal = SubResource("PlaceholderTexture2D_ta1e2")
 script = ExtResource("1_ta1e2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 89.0
+offset_bottom = 74.0
+theme_override_font_sizes/normal_font_size = 27
+text = "Bread"
+fit_content = true

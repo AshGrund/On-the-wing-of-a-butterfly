@@ -1,11 +1,18 @@
 extends Node
 var paused = false
+var showingInventory = false
 
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("escape") and get_node("SceneManager").currentScene[0] != "Main Menu":
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("escape") and get_node("SceneManager").currentScene[0] != "MainMenu":
 		pauseAndUnpause()
-	if get_node("SceneManager").currentScene[0] == "Main Menu" and paused:
+	if get_node("SceneManager").currentScene[0] == "MainMenu" and paused:
 		pauseAndUnpause()
+	if get_node("SceneManager").currentScene[0] == "MainMenu" and showingInventory:
+		get_node("InventoryManager").hide()
+		showingInventory = false
+	elif get_node("SceneManager").currentScene[0] != "MainMenu" and !showingInventory:
+		get_node("InventoryManager").show()
+		showingInventory = true
 
 func pauseAndUnpause():
 	if(!paused):

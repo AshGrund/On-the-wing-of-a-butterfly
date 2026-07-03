@@ -1,9 +1,107 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq2uycx2f7brq"]
+[gd_scene load_steps=5 format=3 uid="uid://63e23yiq0hbc"]
 
 [ext_resource type="Script" uid="uid://kot2lauaf6l7" path="res://Scripts/Managers/Inventory Manager.gd" id="1_cb07b"]
-[ext_resource type="PackedScene" uid="uid://63e23yiq0hbc" path="res://Objects/UI/Inventory.tscn" id="2_txvml"]
+[ext_resource type="Script" uid="uid://cgfb7osavu1xi" path="res://Scripts/Buttons/Change Selected Slot.gd" id="2_txvml"]
 
-[node name="InventoryManager" type="Node2D"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v4241"]
+size = Vector2(600, 200)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_txvml"]
+size = Vector2(200, 200)
+
+[node name="InventoryManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 660.0
+offset_top = 880.0
+offset_right = -660.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_cb07b")
 
-[node name="Inventory" parent="." instance=ExtResource("2_txvml")]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("PlaceholderTexture2D_v4241")
+
+[node name="0" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="ItemPlace" type="CenterContainer" parent="0"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Select Slot Button" type="Button" parent="0"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+flat = true
+script = ExtResource("2_txvml")
+
+[node name="Selected" type="TextureRect" parent="0"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = SubResource("PlaceholderTexture2D_txvml")
+
+[node name="1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_right = 400.0
+offset_bottom = 200.0
+
+[node name="ItemPlace" type="CenterContainer" parent="1"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Select Slot Button" type="Button" parent="1"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+flat = true
+script = ExtResource("2_txvml")
+
+[node name="Selected" type="TextureRect" parent="1"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.588235)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = SubResource("PlaceholderTexture2D_txvml")
+
+[node name="2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 400.0
+offset_right = 600.0
+offset_bottom = 200.0
+
+[node name="ItemPlace" type="CenterContainer" parent="2"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Select Slot Button" type="Button" parent="2"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+flat = true
+script = ExtResource("2_txvml")
+
+[node name="Selected" type="TextureRect" parent="2"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.588235)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = SubResource("PlaceholderTexture2D_txvml")

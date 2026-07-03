@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://p02e2svossg5"]
+[gd_scene load_steps=2 format=3 uid="uid://p02e2svossg5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d6d1f"]
+size = Vector2(150, 150)
 
 [node name="Keys" type="TextureRect"]
+texture = SubResource("PlaceholderTexture2D_d6d1f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 152.0
+offset_bottom = 43.0
+theme_override_font_sizes/normal_font_size = 29
+text = "Keys
+"

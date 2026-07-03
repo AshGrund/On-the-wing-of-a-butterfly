@@ -16,17 +16,17 @@ func _ready():
 			get_node("/root/GameManager/SceneManager/" + majorScene + "/" + minorScene + "/" + item).show()
 			itemsHere.append(item)
 
-func placeItem():
-	var itemName = get_node("/root/GameManager/InventoryManager").attemptPlace()
+func PlaceItem():
+	var itemName = get_node("/root/GameManager/InventoryManager").AttemptPlace()
 	if(itemName):
-		get_node("/root/GameManager/SaveManager").changeVariable(majorScene, itemName, minorScene)
-		get_node("/root/GameManager/SaveManager").changeVariable("Inventory", itemName, false)
+		get_node("/root/GameManager/SaveManager").ChangeVariable(majorScene, itemName, minorScene)
+		get_node("/root/GameManager/SaveManager").ChangeVariable("Inventory", itemName, "no")
 		get_node("/root/GameManager/SceneManager/" + majorScene + "/" + minorScene + "/" + itemName).show()
 		itemsHere.append(itemName)
 
-func pickUpItem(item):
-	if(get_node("/root/GameManager/InventoryManager").attemptPickUp(item)):
-		get_node("/root/GameManager/SaveManager").changeVariable(majorScene, item, false)
-		get_node("/root/GameManager/SaveManager").changeVariable("Inventory", item, true)
+func PickUpItem(item):
+	if(get_node("/root/GameManager/InventoryManager").AttemptPickUp(item)):
+		get_node("/root/GameManager/SaveManager").ChangeVariable(majorScene, item, "no")
+		get_node("/root/GameManager/SaveManager").ChangeVariable("Inventory", item, "yes")
 		get_node("/root/GameManager/SceneManager/" + majorScene + "/" + minorScene + "/" + item).hide()
 		itemsHere.erase(item)

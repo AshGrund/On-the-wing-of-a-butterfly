@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://pjrde7g3immt"]
+[gd_scene load_steps=3 format=3 uid="uid://pjrde7g3immt"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_aslkm"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_aslkm"]
+size = Vector2(142, 96)
+
 [node name="Bills" type="TextureButton"]
+offset_right = 142.0
+offset_bottom = 96.0
+texture_normal = SubResource("PlaceholderTexture2D_aslkm")
 script = ExtResource("1_aslkm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 69.0
+offset_bottom = 32.0
+theme_override_font_sizes/normal_font_size = 27
+text = "Bills"
+fit_content = true

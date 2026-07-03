@@ -1,6 +1,6 @@
 extends Node
 
-var inventory := [null, null, null, null, null]
+var inventory := [null, null, null]
 var selectedSlot := 0
 var itemDirName := "res://Objects/UI/Items"
 var itemDir
@@ -23,27 +23,33 @@ func _ready():
 		# check if it should be in a slot and add it if needed
 		
 		if get_node("/root/GameManager/SaveManager").GetVariable("Inventory", item.replace(".tscn", "")) != "no":
-			attemptPickUp(item)
+			AttemptPickUp(item)
+		
+	# show the selected slot
+	var tempStr = str(selectedSlot)
+	self.find_child(tempStr).find_child("Selected").show()
 
 # adds items to the inventory from picking them up
-func attemptPickUp(item):
+func AttemptPickUp(item):
 	# check for an available slot
 	var i = 0
 	while inventory[i]:
 		i += 1
 	
-	if i >= 5: return false
+	if i >= 3: return false
 	else:
 		# instantiate item parent it to the slot and put it in the inventory array
-		inventory[i] = itemList[item].instantiate()
-		self.find_child(i).find_child("ItemPlace").add_child(inventory[i])
+		inventory[i] = itemList[item.replace(".tscn", "")].instantiate()
+		var tempStr = str(i)
+		self.find_child(tempStr).find_child("ItemPlace").add_child(inventory[i])
 		return true
 
 # removes item for inventory to place it
-func attemptPlace():
+func AttemptPlace():
 	# check if there i something in the slot, if there is return the name and remove it from the slot
 	if inventory[selectedSlot]:
 		var itemName = inventory[selectedSlot].name
+		inventory[selectedSlot].queue_free()
 		inventory[selectedSlot] = null
 		
 		return itemName
@@ -51,7 +57,9 @@ func attemptPlace():
 	else: return false
 
 # change the selected slot
-func changeSelectedSlot(slot:int):
-	self.get_child(selectedSlot).find_child("Selected").hide()
+func ChangeSelectedSlot(slot:int):
+	var tempStr = str(selectedSlot)
+	self.find_child(tempStr).find_child("Selected").hide()
 	selectedSlot = slot
-	self.get_child(selectedSlot).find_child("Selected").show()
+	tempStr = str(selectedSlot)
+	self.find_child(tempStr).find_child("Selected").show()
