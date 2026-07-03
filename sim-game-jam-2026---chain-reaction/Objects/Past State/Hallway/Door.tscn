@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxi0gop3n2lc5"]
+
+[ext_resource type="PackedScene" uid="uid://cw8qnyvstcals" path="res://Objects/UI/Back To Main.tscn" id="1_jusy8"]
+
+[node name="Door" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackToMain" parent="." instance=ExtResource("1_jusy8")]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 919.0
+offset_right = 864.0
+offset_bottom = 951.0
+who = "Past/Hallway"

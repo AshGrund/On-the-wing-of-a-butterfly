@@ -12,7 +12,12 @@ script = ExtResource("1_ukjjd")
 
 [node name="SaveManager" parent="." instance=ExtResource("6_jab6s")]
 
-[node name="SceneManager" parent="." instance=ExtResource("1_kqt86")]
+[node name="SceneManagerPast" parent="." instance=ExtResource("1_kqt86")]
+sceneDirName = "res://Scenes/Past State"
+loadFirstName = ""
+
+[node name="SceneManagerCurrent" parent="." instance=ExtResource("1_kqt86")]
+sceneDirName = "res://Scenes/Current State"
 
 [node name="SoundManager" parent="." instance=ExtResource("2_r74ft")]
 

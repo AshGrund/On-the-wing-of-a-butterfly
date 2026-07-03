@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d28ewxcqwk4ik"]
-
-[ext_resource type="Script" uid="uid://dnytc4if0kfef" path="res://Scripts/Managers/Scene Manager.gd" id="1_totuj"]
-
-[node name="MainMenu" type="Node2D"]
-script = ExtResource("1_totuj")
-sceneDirName = "res://Objects/Scene Objects/Main Menu"
-loadFirstName = "Main"

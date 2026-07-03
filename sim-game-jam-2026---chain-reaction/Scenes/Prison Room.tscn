@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://4p0wb6fc1dmj"]
-
-[ext_resource type="Script" uid="uid://dnytc4if0kfef" path="res://Scripts/Managers/Scene Manager.gd" id="1_56v8u"]
-
-[node name="PrisonRoom" type="Node2D"]
-script = ExtResource("1_56v8u")
-sceneDirName = "res://Objects/Scene Objects/Prison Room"
-loadFirstName = "Zoomed Out"

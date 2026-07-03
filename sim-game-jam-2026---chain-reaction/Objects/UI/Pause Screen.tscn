@@ -63,3 +63,4 @@ theme_override_font_sizes/font_size = 60
 text = "Main Menu"
 script = ExtResource("1_3ouch")
 scene = "Main Menu"
+dynamic = true

@@ -3,7 +3,7 @@ extends Node
 var saveDir := DirAccess.open("res://Saves")
 var saveName := "Scene Changes"
 var variables := ConfigFile.new()
-var isReady := false
+var variablesBackUp := ConfigFile.new()
 
 func _ready():
 	if saveDir == null: printerr("Could not open the Saves folder"); return
@@ -14,7 +14,8 @@ func _ready():
 	if err != OK:
 		variables.save(saveDir.get_current_dir() + "/" + saveName + ".cfg")
 	
-	isReady = true
+	err =  variablesBackUp.load(saveDir.get_current_dir() + "/Reset Past State.cfg")
+	
 
 func GetVariable(scene, object):
 	if !variables.get_value(object, scene):
@@ -28,3 +29,7 @@ func ChangeVariable(scene, object, value):
 
 func Save():
 		variables.save(saveDir.get_current_dir() + "/" + saveName + ".cfg")
+
+func Reset():
+	variables = variablesBackUp
+	Save()

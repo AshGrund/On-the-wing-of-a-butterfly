@@ -5,7 +5,7 @@ extends Node
 
 var sceneDir
 var scenes:Dictionary
-var currentScene:Array
+var currentScene:= [null, null]
 
 
 # loads all the scenes in advance so that they can be instantiated later on
@@ -22,7 +22,7 @@ func _ready():
 		scenes[file.replace(".tscn", "")] = scene
 	
 	# instantiate the starting scene (change name as needed)
-	SwitchScene(loadFirstName)
+	if loadFirstName: SwitchScene(loadFirstName)
 
 # save variables, delete the currently shown scene and instantiate the next one
 func SwitchScene(scene = loadFirstName):
@@ -30,10 +30,14 @@ func SwitchScene(scene = loadFirstName):
 	get_node("/root/GameManager/SaveManager").Save()
 	
 		# delete current scene
-	if(currentScene):
-			currentScene[1].queue_free()
+	if(currentScene[1]):
+		currentScene[1].queue_free()
 	
 	# initialize new scene and make them a child of this object
 	var instantiatedScene = scenes[scene].instantiate()
 	currentScene = [instantiatedScene.name, instantiatedScene]
 	self.add_child(currentScene[1])	
+
+func EmptyScene():
+	currentScene[1].queue_free()
+	currentScene = [null, null]
