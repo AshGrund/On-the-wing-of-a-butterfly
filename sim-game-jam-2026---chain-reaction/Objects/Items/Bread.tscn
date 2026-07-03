@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6fg5uhpp24v7"]
+
+[ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_ta1e2"]
+
+[node name="Bread" type="TextureButton"]
+script = ExtResource("1_ta1e2")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq2uycx2f7brq"]
+
+[ext_resource type="Script" uid="uid://kot2lauaf6l7" path="res://Scripts/Managers/Inventory Manager.gd" id="1_cb07b"]
+[ext_resource type="PackedScene" uid="uid://63e23yiq0hbc" path="res://Objects/UI/Inventory.tscn" id="2_txvml"]
+
+[node name="InventoryManager" type="Node2D"]
+script = ExtResource("1_cb07b")
+
+[node name="Inventory" parent="." instance=ExtResource("2_txvml")]

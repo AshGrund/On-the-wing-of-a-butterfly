@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://p02e2svossg5"]
+
+[node name="Keys" type="TextureRect"]

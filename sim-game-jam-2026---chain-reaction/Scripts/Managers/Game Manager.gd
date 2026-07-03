@@ -11,10 +11,12 @@ func pauseAndUnpause():
 	if(!paused):
 		get_node("SceneManager").process_mode = Node.PROCESS_MODE_DISABLED
 		get_node("SoundManager").process_mode = Node.PROCESS_MODE_DISABLED
+		get_node("InventoryManager").process_mode = Node.PROCESS_MODE_DISABLED
 		get_node("PauseScreen").show()
 		paused = true
 	else:
 		get_node("SceneManager").process_mode = Node.PROCESS_MODE_INHERIT
 		get_node("SoundManager").process_mode = Node.PROCESS_MODE_INHERIT
+		get_node("InventoryManager").process_mode = Node.PROCESS_MODE_INHERIT
 		get_node("PauseScreen").hide()
 		paused = false

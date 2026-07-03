@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccmrc4fwygv5o"]
+
+[ext_resource type="Script" uid="uid://b8cg3w1h6ylcn" path="res://Scripts/Buttons/Place Button.gd" id="1_ckrr2"]
+
+[node name="PlaceItemButton" type="Button"]
+text = "Place Item"
+script = ExtResource("1_ckrr2")

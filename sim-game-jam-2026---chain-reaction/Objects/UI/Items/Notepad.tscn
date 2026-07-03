@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://1knd4w7feac1"]
+
+[node name="Notepad" type="TextureRect"]

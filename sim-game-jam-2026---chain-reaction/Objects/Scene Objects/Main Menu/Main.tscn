@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cehs37m4iolge"]
 
-[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="1_sc1hi"]
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="1_sc1hi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_totqd"]
 bg_color = Color(0.695531, 0.791923, 0.892428, 1)

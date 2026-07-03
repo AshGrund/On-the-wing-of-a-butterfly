@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6k2eq43c7lhh"]
+
+[ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_vlvvp"]
+
+[node name="Warning" type="TextureButton"]
+script = ExtResource("1_vlvvp")

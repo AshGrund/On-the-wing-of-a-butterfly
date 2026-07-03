@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://k2kk6iijjioj"]
+[gd_scene load_steps=3 format=3 uid="uid://k2kk6iijjioj"]
 
 [ext_resource type="PackedScene" uid="uid://cw8qnyvstcals" path="res://Objects/UI/Back To Main.tscn" id="1_8qeup"]
+[ext_resource type="Script" uid="uid://ch48mede0tqt4" path="res://Scripts/Managers/Scene Item Manager.gd" id="1_ukpwg"]
 
 [node name="CoatHanger" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ukpwg")
 
 [node name="BackToMain" parent="." instance=ExtResource("1_8qeup")]
 layout_mode = 0

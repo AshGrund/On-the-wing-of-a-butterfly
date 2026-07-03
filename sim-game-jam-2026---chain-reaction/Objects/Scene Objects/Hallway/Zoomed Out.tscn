@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dum0vt1bkrqqp"]
 
 [ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_a735y"]
-[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="2_yjs8k"]
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="2_yjs8k"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a735y"]
 size = Vector2(439, 905)

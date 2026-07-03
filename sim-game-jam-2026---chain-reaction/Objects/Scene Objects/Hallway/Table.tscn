@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1ekcmewgx6wh"]
+[gd_scene load_steps=3 format=3 uid="uid://d1ekcmewgx6wh"]
 
+[ext_resource type="Script" uid="uid://ch48mede0tqt4" path="res://Scripts/Managers/Scene Item Manager.gd" id="1_2l0rn"]
 [ext_resource type="PackedScene" uid="uid://cw8qnyvstcals" path="res://Objects/UI/Back To Main.tscn" id="1_hxsvy"]
 
 [node name="Table" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2l0rn")
 
 [node name="BackToMain" parent="." instance=ExtResource("1_hxsvy")]
 layout_mode = 0

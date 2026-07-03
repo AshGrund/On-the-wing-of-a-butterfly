@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bqbs3ucriyrib"]
 
 [ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_i32k0"]
-[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Scene Change Button.gd" id="2_fv5oi"]
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="2_fv5oi"]
 [ext_resource type="Texture2D" uid="uid://6vgfi6k1npe0" path="res://Textures/UI/navigation_w.png" id="3_xi4o7"]
 [ext_resource type="Texture2D" uid="uid://bvhp4encgi3h0" path="res://Textures/UI/navigation_e.png" id="4_guvpp"]
 
