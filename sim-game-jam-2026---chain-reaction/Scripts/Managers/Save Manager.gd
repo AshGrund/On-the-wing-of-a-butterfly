@@ -26,10 +26,12 @@ func GetVariable(scene, object):
 
 func ChangeVariable(scene, object, value):
 	variables.set_value(object, scene, value)
+	Save()
 
 func Save():
 		variables.save(saveDir.get_current_dir() + "/" + saveName + ".cfg")
 
 func Reset():
-	variables = variablesBackUp
+	variablesBackUp.save(saveDir.get_current_dir() + "/" + saveName + ".cfg")
+	variables.load(saveDir.get_current_dir() + "/" + saveName + ".cfg")
 	Save()

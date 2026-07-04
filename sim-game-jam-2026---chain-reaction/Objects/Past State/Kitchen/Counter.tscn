@@ -29,7 +29,7 @@ offset_left = 875.0
 offset_top = 917.0
 offset_right = 907.0
 offset_bottom = 949.0
-who = "Past/Kitchen"
+who = "/Kitchen"
 
 [node name="Bills" parent="." instance=ExtResource("3_o336s")]
 visible = false

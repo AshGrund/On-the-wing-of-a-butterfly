@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cl857rwnl0jjm"]
+
+[node name="CutsceneManager" type="Node2D"]

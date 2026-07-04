@@ -4,18 +4,18 @@ extends Control
 @export var scene:String
 @export var dynamic:bool
 
-var dynamicWho
+var dynamicScene
 
 func _ready():
 	self.pressed.connect(requestSceneChange)
 
 func requestSceneChange():
 	if dynamic:
-		dynamicWho = get_node("/root/GameManager").currentState + who
-	else: dynamicWho = who
+		dynamicScene = scene + get_node("/root/GameManager").currentState
+	else: dynamicScene = scene
 	
-	if scene:
-		get_node("/root/GameManager/SceneManager" + dynamicWho).SwitchScene(scene)
+	if dynamicScene:
+		get_node("/root/GameManager/SceneManager" + who).SwitchScene(dynamicScene)
 	else:
-		get_node("/root/GameManager/SceneManager" + dynamicWho).SwitchScene()
+		get_node("/root/GameManager/SceneManager" + who).SwitchScene()
 		

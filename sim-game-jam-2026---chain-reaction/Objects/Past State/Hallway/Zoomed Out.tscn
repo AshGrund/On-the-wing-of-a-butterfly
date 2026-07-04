@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dum0vt1bkrqqp"]
+[gd_scene load_steps=5 format=3 uid="uid://dum0vt1bkrqqp"]
 
 [ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_a735y"]
 [ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="2_yjs8k"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a735y"]
-size = Vector2(439, 905)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yjs8k"]
 size = Vector2(200, 800)
@@ -29,18 +26,7 @@ offset_bottom = 951.0
 scale = Vector2(5, 5)
 texture_normal = ExtResource("1_a735y")
 script = ExtResource("2_yjs8k")
-who = "Past"
 scene = "Living Room"
-
-[node name="Door" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 750.0
-offset_right = 1189.0
-offset_bottom = 905.0
-texture_normal = SubResource("PlaceholderTexture2D_a735y")
-script = ExtResource("2_yjs8k")
-who = "Past/Hallway"
-scene = "Door"
 
 [node name="Coat Hanger" type="TextureButton" parent="."]
 layout_mode = 0
@@ -50,7 +36,7 @@ offset_right = 473.0
 offset_bottom = 952.0
 texture_normal = SubResource("PlaceholderTexture2D_yjs8k")
 script = ExtResource("2_yjs8k")
-who = "Past/Hallway"
+who = "/Hallway"
 scene = "Coat Hanger"
 
 [node name="Table" type="TextureButton" parent="."]
@@ -61,5 +47,5 @@ offset_right = 1658.0
 offset_bottom = 988.0
 texture_normal = SubResource("PlaceholderTexture2D_0crlx")
 script = ExtResource("2_yjs8k")
-who = "Past/Hallway"
+who = "/Hallway"
 scene = "Table"

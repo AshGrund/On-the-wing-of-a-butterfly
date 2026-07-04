@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqoujwy41nv"]
 
-[ext_resource type="Script" uid="uid://cpob3xqau2s8a" path="res://Scripts/Buttons/Go To Past Button.gd" id="1_i8csy"]
+[ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="1_y3okf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e5ysa"]
 size = Vector2(560, 449)
@@ -8,11 +8,12 @@ size = Vector2(560, 449)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pm56y"]
 size = Vector2(200, 200)
 
-[node name="PrisonRoom" type="Control"]
+[node name="PrisonRoomCurrent" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 
 [node name="Door" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1184.0
 offset_top = 4.0
 offset_right = 1744.0
@@ -41,7 +42,8 @@ offset_top = 281.0
 offset_right = 594.0
 offset_bottom = 481.0
 texture_normal = SubResource("PlaceholderTexture2D_pm56y")
-script = ExtResource("1_i8csy")
+script = ExtResource("1_y3okf")
+scene = "Prison Room Past"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
 layout_mode = 0

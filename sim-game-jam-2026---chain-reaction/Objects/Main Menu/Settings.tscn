@@ -62,4 +62,3 @@ text = "Back to main"
 script = ExtResource("1_yc21b")
 who = "/MainMenu"
 scene = "Main"
-dynamic = true

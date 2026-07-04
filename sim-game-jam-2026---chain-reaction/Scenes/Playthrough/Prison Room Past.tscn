@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dnytc4if0kfef" path="res://Scripts/Managers/Scene Manager.gd" id="1_56v8u"]
 
-[node name="PrisonRoom" type="Node2D"]
+[node name="PrisonRoomPast" type="Node2D"]
 script = ExtResource("1_56v8u")
 sceneDirName = "res://Objects/Past State/Prison Room"
 loadFirstName = "Zoomed Out"

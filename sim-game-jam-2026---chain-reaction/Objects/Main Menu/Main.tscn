@@ -50,7 +50,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Start"
 script = ExtResource("1_sc1hi")
-scene = "Prison Room"
+scene = "Prison Room "
 dynamic = true
 
 [node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]
@@ -61,4 +61,3 @@ text = "Settings"
 script = ExtResource("1_sc1hi")
 who = "/MainMenu"
 scene = "Settings"
-dynamic = true
