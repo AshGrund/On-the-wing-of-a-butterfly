@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqoujwy41nv"]
+[gd_scene format=3 uid="uid://cqoujwy41nv"]
 
 [ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="1_y3okf"]
 
@@ -8,11 +8,11 @@ size = Vector2(560, 449)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pm56y"]
 size = Vector2(200, 200)
 
-[node name="PrisonRoomCurrent" type="Control"]
+[node name="PrisonRoomCurrent" type="Control" unique_id=466965117]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Door" type="TextureButton" parent="."]
+[node name="Door" type="TextureButton" parent="." unique_id=1680351534]
 layout_mode = 0
 offset_left = 1184.0
 offset_top = 4.0
@@ -20,7 +20,7 @@ offset_right = 1744.0
 offset_bottom = 453.0
 texture_normal = SubResource("PlaceholderTexture2D_e5ysa")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Door"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Door" unique_id=193870935]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -35,7 +35,8 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Butterfly" type="TextureButton" parent="." unique_id=1907275658]
+visible = false
 layout_mode = 0
 offset_left = 394.0
 offset_top = 281.0
@@ -45,7 +46,7 @@ texture_normal = SubResource("PlaceholderTexture2D_pm56y")
 script = ExtResource("1_y3okf")
 scene = "Prison Room Past"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Butterfly" unique_id=2144460207]
 layout_mode = 0
 offset_right = 198.0
 offset_bottom = 51.0

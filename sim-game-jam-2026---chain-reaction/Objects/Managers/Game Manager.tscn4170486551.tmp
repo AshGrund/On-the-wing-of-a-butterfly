@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://xa2u7la1t1d7"]
+
+[ext_resource type="PackedScene" uid="uid://d2sceje6cywor" path="res://Objects/Managers/Scene Manager.tscn" id="1_kqt86"]
+[ext_resource type="Script" uid="uid://dclm3c1hgvqu6" path="res://Scripts/Managers/Game Manager.gd" id="1_ukjjd"]
+[ext_resource type="PackedScene" uid="uid://cqdxbn5eilw4k" path="res://Objects/Managers/Sound Manager.tscn" id="2_r74ft"]
+[ext_resource type="PackedScene" uid="uid://t4vwq30oi3l8" path="res://Objects/UI/Pause Screen.tscn" id="3_r74ft"]
+[ext_resource type="PackedScene" uid="uid://63e23yiq0hbc" path="res://Objects/Managers/Inventory Manager.tscn" id="5_abcgk"]
+[ext_resource type="PackedScene" uid="uid://bkqxedev1ibjr" path="res://Objects/Managers/Save Manager.tscn" id="6_jab6s"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.gd" id="7_syqyc"]
+
+[node name="GameManager" type="Node2D" unique_id=1002103786]
+script = ExtResource("1_ukjjd")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=1461088625]
+offset_left = 1.0
+offset_top = 900.0
+offset_right = 1926.0
+offset_bottom = 1084.0
+theme_override_font_sizes/normal_font_size = 46
+script = ExtResource("7_syqyc")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[node name="SaveManager" parent="." unique_id=1086017 instance=ExtResource("6_jab6s")]
+
+[node name="SceneManager" parent="." unique_id=1412305213 instance=ExtResource("1_kqt86")]
+sceneDirName = "res://Scenes/Playthrough"
+loadFirstName = "Prison Room Current"
+
+[node name="SoundManager" parent="." unique_id=1131963470 instance=ExtResource("2_r74ft")]
+
+[node name="PauseScreen" parent="." unique_id=1492615127 instance=ExtResource("3_r74ft")]
+visible = false
+
+[node name="InventoryManager" parent="." unique_id=1048436689 instance=ExtResource("5_abcgk")]
+visible = false
+offset_left = 0.0
+offset_right = 0.0
+offset_bottom = 880.0
+
+[connection signal="finished_typing" from="DialogueLabel" to="." method="_on_dialogue_label_finished_typing"]

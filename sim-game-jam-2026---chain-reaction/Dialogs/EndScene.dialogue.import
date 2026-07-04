@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://ojajiav70i4o"
+path="res://.godot/imported/EndScene.dialogue-2c65ca146011620d6b280aac0a439c29.tres"
+
+[deps]
+
+source_file="res://Dialogs/EndScene.dialogue"
+dest_files=["res://.godot/imported/EndScene.dialogue-2c65ca146011620d6b280aac0a439c29.tres"]
+
+[params]
+
+defaults=true

@@ -8,6 +8,11 @@ var dynamicScene
 
 func _ready():
 	self.pressed.connect(requestSceneChange)
+	self.mouse_entered.connect(requestHoverAndUnHover)
+	self.mouse_exited.connect(requestHoverAndUnHover)
+
+func requestHoverAndUnHover():
+	get_node("/root/GameManager").HoverAndUnhover()
 
 func requestSceneChange():
 	if dynamic:

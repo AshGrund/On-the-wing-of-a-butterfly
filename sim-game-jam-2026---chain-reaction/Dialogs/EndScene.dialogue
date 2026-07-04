@@ -1,0 +1,130 @@
+~ start
+Captor: [speed=2]Captor: [speed=0.2]Time for food...
+
+match Globals.foodCutscene:
+	when 0:
+		Captor: [speed=2]Captor: [speed=0.2]You get some Bread with water today 
+	when 1:
+		Captor: [speed=2]Captor: [speed=0.2]You get some Eggs with water today 
+	when 2:
+		Captor: [speed=2]Captor: [speed=0.2]You get some Takeout today 
+
+[speed=0.2]you eat what you get... 
+
+Captor: [speed=2]Captor: [speed=0.2]So it has been a few days since you got here now 
+Captor: [speed=2]Captor: [speed=0.2]Have you tought about my offer yet? 
+
+You: [speed=2]You:[speed=0.2] ... 
+
+[speed=0.2]Your captor moves to the desk in the room 
+
+match Globals.talkCutscene:
+	when 0:
+		[speed=0.2]They seem to put something into their pocket
+		Captor: [speed=2]Captor: [speed=0.2]You know, this could be a lot easyer if you where to just talk.
+		Captor: [speed=2]Captor: [speed=0.2]But oh well, maybe a few more days will do the trick.
+		[speed=0.2]They leave the room
+	when 1:
+		[speed=0.2]They read a note that was on the table
+		Captor: [speed=2]Captor: [speed=0.2]Right, almost forgot about that...
+		Captor: [speed=2]Captor: [speed=0.2]I will be out for a bit today, don't try anything funny.
+		Captor: [speed=2]Captor: [speed=0.2]You know what the consequenses are...
+		[speed=0.2]They leave the room
+	when 2:
+		Captor: [speed=2]Captor: [speed=0.2]GODDAMNIT...
+		[speed=0.2]They turn to you seeming irritated
+		Captor: [speed=2]Captor: [speed=0.2]I have to go, you better not try anything!
+		[speed=0.2]They quickly leave the room
+
+match Globals.escapeCutscene:
+	when 4,5,6,7:
+		[speed=0.2]You hear a lot of sound coming from the hallway
+		[speed=0.2]Then you hear the door slam shut
+	when 3,1:
+		[speed=0.2]You hear some shuffeling in the hallway
+		[speed=0.2]Then you softly hear the door close
+	when 2,0:
+		[speed=0.2]You wait for a little bit, but all you hear is them watching TV
+
+[speed=0.2]You decide it is time to try something
+[speed=0.2]You pull on your ropes with all your strength...
+[speed=0.2]...
+[speed=0.2]...
+[speed=0.2]...
+
+match Globals.escapeCutscene:
+	when 7,6,5,3,2:
+		[speed=0.2]You manage to break the ropes and get free
+	when 4,1,0:
+		[speed=0.2]The ropes stay tight around your wrists[wait=2]
+		=> Butterfly
+
+match Globals.escapeCutscene:
+	when 5,6,7:
+		[speed=0.2]They really seem to have needed to go quickly
+		[speed=0.2]Stuff seems a bit out of place
+	when 3:
+		[speed=0.2]They left...
+		[speed=0.2]But it seems like they hid everything that might help you
+		=> Butterfly
+	when 2:
+		[speed=0.2]You open the door to out od this room...
+		[speed=0.2]They turn around immediatly
+		[speed=0.2]You bolt for the door
+		[speed=0.2]They crash into you
+		[speed=0.2]...
+		[speed=0.2]...
+		[speed=0.2]You wake up back in your cell
+		=> Butterfly
+
+match Globals.escapeCutscene:
+	when 6,7:
+		[speed=0.2]Their key they took it
+		[speed=0.2]But you know where the back-up is
+		[speed=0.2]You take it and go to the door
+		[speed=0.2]The key works... The door opens
+		[speed=0.2]You are free
+	when 5:
+		[speed=0.2]Their key they took it
+		[speed=0.2]But you know where the back-up is
+		[speed=0.2]No! Wait! It isn't there!
+		[speed=0.2]You look everywhere
+		[speed=0.2]...
+		[speed=0.2]But it simply isn't there
+		=> Butterfly
+
+match Globals.escapeCutscene:
+	when 7:
+		[speed=0.2]You check for anything that you can use to report them
+		[speed=0.2]There on the couch...
+		[speed=0.2]Their passport! You take it with you and bolt
+		[speed=0.2]You go to the police station
+		[speed=0.2]You show them the passport and tell your story
+		[speed=0.2]They believe you and soon they find your captor
+		[speed=0.2]You will never have to see them again
+		=> END
+	when 6:
+		[speed=0.2]You check for anything that you can use to report them
+		[speed=0.2]You search the whole house
+		[speed=0.2]But can't find anything
+		[speed=0.2]You go to the police station
+		[speed=0.2]You tell your story
+		[speed=0.2]They believe you, but without anything to recognise them by it will be difficult
+		[speed=0.2]They don't find your captor
+		[speed=0.2]And though you are free.
+		[speed=0.2]You always fear they will find you again
+
+~ Butterfly
+[speed=0.2]Then a butterfly shows up
+[speed=0.2]It hovers near you for a moment
+[speed=0.2]Butterfly: [speed=2]Voice: [speed=0.2]Hey, you need some help?
+[speed=0.2]You look around confused for a moment
+[speed=0.2]Butterfly: [speed=2]Voice: [speed=0.2]*sighs* It is me, the butterfly
+[speed=0.2]You look to the butterfly again
+[speed=0.2]Butterfly: [speed=2]Butterfly: [speed=0.2]well, do you want some help?
+[speed=0.2]You nod quickly
+[speed=0.2]Butterfly: [speed=2]Butterfly: [speed=0.2]I can send you back in time
+[speed=0.2]Butterfly: [speed=2]Butterfly: [speed=0.2]There you can change some small things around
+[speed=0.2]Butterfly: [speed=2]Butterfly: [speed=0.2]Maybe that will change your fate
+
+=> END

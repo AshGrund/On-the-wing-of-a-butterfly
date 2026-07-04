@@ -7,9 +7,13 @@ var sceneManager
 var inventoryManager
 var soundManager
 var pauseScreen
-var foodCutscene
-var talkCutscene
-var escapeCutscene
+var dialogueLabel
+var currentLine
+var resource
+var normalCursor
+var hoverCursor
+var hovering = false
+
 
 func _ready() -> void:
 	saveManager = get_node("SaveManager")
@@ -17,13 +21,24 @@ func _ready() -> void:
 	inventoryManager = get_node("InventoryManager")
 	soundManager = get_node("SoundManager")
 	pauseScreen = get_node("PauseScreen")
+	dialogueLabel = get_node("DialogueLabel")
+	resource = load("res://Dialogs/EndScene.dialogue")
+	normalCursor = load("res://Textures/Cursor/pointer_a.png")
+	hoverCursor = load("res://Textures/Cursor/hand_point.png")
+	
+	saveManager.Reset()
+	
+	Input.set_custom_mouse_cursor(normalCursor)
+	
+	# show the Cutscene at the start
+	CalculateCurrent() # don't forget to turn this back on
 
 # make sure everything keeps working without weird screens being shown
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("escape") and sceneManager.currentScene[0] != "MainMenu":
-		pauseAndUnpause()
+		pauseAndUnpause(true)
 	if sceneManager.currentScene[0] == "MainMenu" and paused:
-		pauseAndUnpause()
+		pauseAndUnpause(true)
 	if sceneManager.currentScene[0] == "MainMenu" and showingInventory or sceneManager.currentScene[0] == "PrisonRoomCurrent" and showingInventory:
 		inventoryManager.hide()
 		showingInventory = false
@@ -31,23 +46,35 @@ func _process(_delta: float) -> void:
 		inventoryManager.show()
 		showingInventory = true
 
+
+
 # pause and unpause the game
-func pauseAndUnpause():
+func pauseAndUnpause(menu):
 	if(!paused):
 		sceneManager.process_mode = Node.PROCESS_MODE_DISABLED
 		soundManager.process_mode = Node.PROCESS_MODE_DISABLED
 		inventoryManager.process_mode = Node.PROCESS_MODE_DISABLED
-		pauseScreen.show()
+		if menu: pauseScreen.show()
 		paused = true
+		print(paused)
 	else:
 		sceneManager.process_mode = Node.PROCESS_MODE_INHERIT
 		soundManager.process_mode = Node.PROCESS_MODE_INHERIT
 		inventoryManager.process_mode = Node.PROCESS_MODE_INHERIT
-		pauseScreen.hide()
+		if menu: pauseScreen.hide()
 		paused = false
+		print(paused)
+
+func HoverAndUnhover():
+	if(hovering):
+		Input.set_custom_mouse_cursor(normalCursor)
+		hovering = false
+	else:
+		Input.set_custom_mouse_cursor(hoverCursor)
+		hovering = true
 
 func CalculateCurrent():
-	var coffeeMachine
+	var _coffeeMachine
 	var eggs
 	var bread
 	var phone
@@ -134,36 +161,57 @@ func CalculateCurrent():
 	# set foodCutscene
 	match [eggs, bread]:
 		[_, 1]:
-			foodCutscene = 0
+			Globals.foodCutscene = 0
 		[1, 0]:
-			foodCutscene = 1
+			Globals.foodCutscene = 1
 		[0, 0]:
-			foodCutscene = 2
+			Globals.foodCutscene = 2
 	
 	# set talkCutscene
 	match [phone, paper]:
 		[var a, 1] when a != 2:
-			talkCutscene = 1
+			Globals.talkCutscene = 1
 		[2, 2]:
-			talkCutscene = 2
+			Globals.talkCutscene = 2
 		[_,_]:
-			talkCutscene = 0
+			Globals.talkCutscene = 0
 	
 	# set escapeCutscene
-	match [foodCutscene, phone, paper, keys, ID]:
+	match [Globals.foodCutscene, phone, paper, keys, ID]:
 		[2, 2, 2, 0, 1]: # they go with haste, you can break the ropes and can get out + you report them
-			escapeCutscene = 6
+			Globals.escapeCutscene = 7
 		[2, 2, 2, 0, 0]: # they go with haste, you can break the ropes and can get out, you can't report them
-			escapeCutscene = 5
+			Globals.escapeCutscene = 6
 		[2, 2, 2, 1, _]:  # they go with haste, you can break the ropes but can't get out
-			escapeCutscene = 4
+			Globals.escapeCutscene = 5
+		[var a, 2, 2, _, _] when a < 2: # they go with haste, but you can't break the ropes
+			Globals.escapeCutscene = 4
 		[2, var a, var b, _, _] when (a == 0 and b > 0) or (a == 1 and b > 0) or (a == 2 and b < 2):  # they go without haste, you can break the ropes and can't get out
-			escapeCutscene = 3
+			Globals.escapeCutscene = 3
 		[2, var a, var b, _, _] when a != 2 and b == 0: # they don't go, you can break the ropes
-			escapeCutscene = 2
+			Globals.escapeCutscene = 2
 		[var a, var b, var c, _, _] when a != 2 and b == 2 or a != 2 and c != 0: # they go but you can't break the ropes
-			escapeCutscene = 1
+			Globals.escapeCutscene = 1
 		_: # they stay home and you can't do anything
-			escapeCutscene = 0
+			Globals.escapeCutscene = 0
 	
-	print(escapeCutscene)
+	dialogueLabel.show()
+	currentLine = await DialogueManager.get_next_dialogue_line(resource, "start")
+	pauseAndUnpause(false)
+	
+	dialogueLabel.dialogue_line = currentLine
+	dialogueLabel.type_out()
+
+
+func _on_dialogue_label_finished_typing() -> void:
+	currentLine = await DialogueManager.get_next_dialogue_line(resource, currentLine.next_id)
+	if currentLine != null:
+		await get_tree().create_timer(1).timeout
+		dialogueLabel.dialogue_line = currentLine
+		dialogueLabel.type_out()
+	else:
+		get_node("SceneManager/PrisonRoomCurrent/Butterfly").show()
+		await get_tree().create_timer(1).timeout
+		dialogueLabel.hide()
+		pauseAndUnpause(false)
+		saveManager.Reset()
