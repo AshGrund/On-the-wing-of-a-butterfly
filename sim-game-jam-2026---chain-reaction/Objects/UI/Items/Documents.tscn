@@ -1,15 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2tq6liupfjou"]
+[gd_scene format=3 uid="uid://b2tq6liupfjou"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3fmbf"]
-size = Vector2(150, 150)
+[ext_resource type="Texture2D" uid="uid://h2fqgxmtg5ov" path="res://Textures/UI/Items/Document.png" id="1_or477"]
 
-[node name="Documents" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_3fmbf")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_right = 152.0
-offset_bottom = 43.0
-theme_override_font_sizes/normal_font_size = 29
-text = "Docs
-"
+[node name="Documents" type="TextureRect" unique_id=836270075]
+texture = ExtResource("1_or477")

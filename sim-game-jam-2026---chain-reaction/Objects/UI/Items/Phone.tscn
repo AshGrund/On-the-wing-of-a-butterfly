@@ -1,14 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhk5y3df2mbp8"]
+[gd_scene format=3 uid="uid://bhk5y3df2mbp8"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_88fy5"]
-size = Vector2(150, 150)
+[ext_resource type="Texture2D" uid="uid://bc15aew0iqukn" path="res://Textures/UI/Items/Phone.png" id="1_x5i2u"]
 
-[node name="Phone" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_88fy5")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 152.0
-offset_bottom = 43.0
-theme_override_font_sizes/normal_font_size = 29
-text = "Phone
-"
+[node name="Phone" type="TextureRect" unique_id=273185328]
+texture = ExtResource("1_x5i2u")

@@ -1,17 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://hpsd08wq4air"]
+[gd_scene format=3 uid="uid://hpsd08wq4air"]
 
+[ext_resource type="Texture2D" uid="uid://slc420mlnwp2" path="res://Textures/Objects/Phone.png" id="1_53n8j"]
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_wua44"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wua44"]
-size = Vector2(100, 200)
-
-[node name="Phone" type="TextureButton"]
-texture_normal = SubResource("PlaceholderTexture2D_wua44")
+[node name="Phone" type="TextureButton" unique_id=1025136308]
+texture_normal = ExtResource("1_53n8j")
 script = ExtResource("1_wua44")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 94.0
-offset_bottom = 37.0
-theme_override_font_sizes/normal_font_size = 27
-text = "Phone"
-fit_content = true

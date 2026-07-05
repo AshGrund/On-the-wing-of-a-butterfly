@@ -18,6 +18,7 @@ func _ready():
 	
 	# load all the files and add them to the scenes array for later use
 	for file: String in sceneDir.get_files():
+		file = file.replace(".remap", "")
 		var scene := load(sceneDir.get_current_dir() + "/" + file)
 		scenes[file.replace(".tscn", "")] = scene
 	

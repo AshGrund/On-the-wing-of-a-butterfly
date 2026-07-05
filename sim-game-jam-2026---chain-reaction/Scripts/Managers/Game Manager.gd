@@ -29,9 +29,6 @@ func _ready() -> void:
 	saveManager.Reset()
 	
 	Input.set_custom_mouse_cursor(normalCursor)
-	
-	# show the Cutscene at the start
-	CalculateCurrent() # don't forget to turn this back on
 
 # make sure everything keeps working without weird screens being shown
 func _process(_delta: float) -> void:
@@ -74,6 +71,8 @@ func HoverAndUnhover():
 		hovering = true
 
 func CalculateCurrent():
+	get_node("SceneManager/PrisonRoomCurrent/Butterfly").hide()
+	
 	var _coffeeMachine
 	var eggs
 	var bread
@@ -214,4 +213,6 @@ func _on_dialogue_label_finished_typing() -> void:
 		await get_tree().create_timer(1).timeout
 		dialogueLabel.hide()
 		pauseAndUnpause(false)
+		if Globals.escapeCutscene == 6:
+			sceneManager.SwitchScene("Credits")
 		saveManager.Reset()

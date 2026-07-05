@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bunadqyuslgr0"]
+[gd_scene format=3 uid="uid://bunadqyuslgr0"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_3itap"]
+[ext_resource type="Texture2D" uid="uid://ba7ss50c4wsko" path="res://Textures/Objects/Key.png" id="1_xdgsp"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3itap"]
-size = Vector2(46, 80)
-
-[node name="Keys" type="TextureButton"]
-texture_normal = SubResource("PlaceholderTexture2D_3itap")
+[node name="Keys" type="TextureButton" unique_id=1192925512]
+texture_normal = ExtResource("1_xdgsp")
 script = ExtResource("1_3itap")

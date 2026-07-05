@@ -1,13 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6xjhk1svl5wx"]
+[gd_scene format=3 uid="uid://b6xjhk1svl5wx"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gk4it"]
-size = Vector2(150, 150)
+[ext_resource type="Texture2D" uid="uid://dx1o5wyyq5erk" path="res://Textures/UI/Items/Bread.png" id="1_y83j2"]
 
-[node name="Bread" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_gk4it")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 152.0
-offset_bottom = 43.0
-theme_override_font_sizes/normal_font_size = 29
-text = "Bread"
+[node name="Bread" type="TextureRect" unique_id=826487027]
+texture = ExtResource("1_y83j2")

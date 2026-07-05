@@ -1,14 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://da4m8ynlrtvfh"]
+[gd_scene format=3 uid="uid://da4m8ynlrtvfh"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8r2d0"]
-size = Vector2(150, 150)
+[ext_resource type="Texture2D" uid="uid://dgfvaimkysqkb" path="res://Textures/UI/Items/Warning.png" id="1_trer4"]
 
-[node name="Warning" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_8r2d0")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 152.0
-offset_bottom = 43.0
-theme_override_font_sizes/normal_font_size = 29
-text = "Warning
-"
+[node name="Warning" type="TextureRect" unique_id=1867702151]
+texture = ExtResource("1_trer4")

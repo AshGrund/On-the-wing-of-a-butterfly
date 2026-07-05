@@ -17,6 +17,8 @@ func _ready():
 	# also check if an item should be added to a slot and add them to it if needed
 	for item: String in itemDir.get_files():
 		# add it to the itemList array
+		item = item.replace(".remap", "")
+		print(item)
 		var loadedItem := load(itemDir.get_current_dir() + "/" + item)
 		itemList[item.replace(".tscn", "")] = loadedItem
 		

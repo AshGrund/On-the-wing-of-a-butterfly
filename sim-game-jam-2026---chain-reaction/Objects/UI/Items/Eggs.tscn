@@ -1,14 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdk2njckv4ekt"]
+[gd_scene format=3 uid="uid://cdk2njckv4ekt"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p5n3f"]
-size = Vector2(150, 150)
+[ext_resource type="Texture2D" uid="uid://ormsif5lyl62" path="res://Textures/UI/Items/Eggs.png" id="1_fqapn"]
 
-[node name="Eggs" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_p5n3f")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 152.0
-offset_bottom = 43.0
-theme_override_font_sizes/normal_font_size = 29
-text = "Eggs
-"
+[node name="Eggs" type="TextureRect" unique_id=43688394]
+texture = ExtResource("1_fqapn")

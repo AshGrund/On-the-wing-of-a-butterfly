@@ -1,15 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://63e23yiq0hbc"]
+[gd_scene format=3 uid="uid://63e23yiq0hbc"]
 
 [ext_resource type="Script" uid="uid://kot2lauaf6l7" path="res://Scripts/Managers/Inventory Manager.gd" id="1_cb07b"]
+[ext_resource type="Texture2D" uid="uid://dqtsrfvp1owvk" path="res://Textures/UI/Inv Back.png" id="2_iro4v"]
 [ext_resource type="Script" uid="uid://cgfb7osavu1xi" path="res://Scripts/Buttons/Change Selected Slot.gd" id="2_txvml"]
+[ext_resource type="Texture2D" uid="uid://du8d1uesye57p" path="res://Textures/UI/Selected.png" id="4_rx047"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v4241"]
-size = Vector2(600, 200)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_txvml"]
-size = Vector2(200, 200)
-
-[node name="InventoryManager" type="Control"]
+[node name="InventoryManager" type="Control" unique_id=891296190]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,87 +17,81 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cb07b")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=405609216]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = SubResource("PlaceholderTexture2D_v4241")
+texture = ExtResource("2_iro4v")
 
-[node name="0" type="Control" parent="."]
+[node name="0" type="Control" parent="." unique_id=1949039023]
 anchors_preset = 0
 offset_right = 200.0
 offset_bottom = 200.0
 
-[node name="ItemPlace" type="CenterContainer" parent="0"]
+[node name="ItemPlace" type="CenterContainer" parent="0" unique_id=317963444]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 
-[node name="Select Slot Button" type="Button" parent="0"]
+[node name="Select Slot Button" type="Button" parent="0" unique_id=1350334401]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 flat = true
 script = ExtResource("2_txvml")
 
-[node name="Selected" type="TextureRect" parent="0"]
-visible = false
-self_modulate = Color(1, 1, 1, 0.509804)
+[node name="Selected" type="TextureRect" parent="0" unique_id=1346000367]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
-texture = SubResource("PlaceholderTexture2D_txvml")
+texture = ExtResource("4_rx047")
 
-[node name="1" type="Control" parent="."]
-layout_mode = 3
+[node name="1" type="Control" parent="." unique_id=2064238499]
 anchors_preset = 0
 offset_left = 200.0
 offset_right = 400.0
 offset_bottom = 200.0
 
-[node name="ItemPlace" type="CenterContainer" parent="1"]
+[node name="ItemPlace" type="CenterContainer" parent="1" unique_id=951843664]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 
-[node name="Select Slot Button" type="Button" parent="1"]
+[node name="Select Slot Button" type="Button" parent="1" unique_id=663815399]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 flat = true
 script = ExtResource("2_txvml")
 
-[node name="Selected" type="TextureRect" parent="1"]
+[node name="Selected" type="TextureRect" parent="1" unique_id=1004399023]
 visible = false
-self_modulate = Color(1, 1, 1, 0.588235)
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
-texture = SubResource("PlaceholderTexture2D_txvml")
+texture = ExtResource("4_rx047")
 
-[node name="2" type="Control" parent="."]
-layout_mode = 3
+[node name="2" type="Control" parent="." unique_id=756981980]
 anchors_preset = 0
 offset_left = 400.0
 offset_right = 600.0
 offset_bottom = 200.0
 
-[node name="ItemPlace" type="CenterContainer" parent="2"]
+[node name="ItemPlace" type="CenterContainer" parent="2" unique_id=1991668973]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 
-[node name="Select Slot Button" type="Button" parent="2"]
+[node name="Select Slot Button" type="Button" parent="2" unique_id=952186115]
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 flat = true
 script = ExtResource("2_txvml")
 
-[node name="Selected" type="TextureRect" parent="2"]
+[node name="Selected" type="TextureRect" parent="2" unique_id=1336162407]
 visible = false
-self_modulate = Color(1, 1, 1, 0.588235)
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
-texture = SubResource("PlaceholderTexture2D_txvml")
+texture = ExtResource("4_rx047")

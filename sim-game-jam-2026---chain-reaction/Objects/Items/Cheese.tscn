@@ -1,19 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ci5rsxl0dl2b4"]
+[gd_scene format=3 uid="uid://ci5rsxl0dl2b4"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_effxx"]
+[ext_resource type="Texture2D" uid="uid://brridpytpmjba" path="res://Textures/Objects/`Cheese.png" id="1_yd3ji"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_effxx"]
-size = Vector2(138, 104)
-
-[node name="Cheese" type="TextureButton"]
+[node name="Cheese" type="TextureButton" unique_id=1449126614]
 offset_right = 138.0
 offset_bottom = 104.0
-texture_normal = SubResource("PlaceholderTexture2D_effxx")
+texture_normal = ExtResource("1_yd3ji")
 script = ExtResource("1_effxx")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 102.0
-offset_bottom = 37.0
-theme_override_font_sizes/normal_font_size = 27
-text = "Cheese"
-fit_content = true

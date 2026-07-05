@@ -1,18 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c26sqk8tpsk3e"]
+[gd_scene format=3 uid="uid://c26sqk8tpsk3e"]
 
+[ext_resource type="Texture2D" uid="uid://bit305pschjea" path="res://Textures/Objects/Documents.png" id="1_88m12"]
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_ye7gr"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ye7gr"]
-size = Vector2(142, 96)
-
-[node name="Documents" type="TextureButton"]
+[node name="Documents" type="TextureButton" unique_id=1288673096]
 offset_right = 142.0
-texture_normal = SubResource("PlaceholderTexture2D_ye7gr")
+texture_normal = ExtResource("1_88m12")
 script = ExtResource("1_ye7gr")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 140.0
-offset_bottom = 34.0
-theme_override_font_sizes/normal_font_size = 24
-text = "Documents"
-fit_content = true

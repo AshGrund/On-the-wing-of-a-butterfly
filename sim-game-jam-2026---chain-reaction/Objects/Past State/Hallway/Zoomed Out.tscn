@@ -1,15 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dum0vt1bkrqqp"]
+[gd_scene format=3 uid="uid://dum0vt1bkrqqp"]
 
 [ext_resource type="Texture2D" uid="uid://d0lbyx2mpdbkw" path="res://Textures/UI/navigation_s.png" id="1_a735y"]
+[ext_resource type="Texture2D" uid="uid://7heyt4wniwae" path="res://Textures/Backgrounds/Hallway.png" id="1_n41hs"]
 [ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="2_yjs8k"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yjs8k"]
-size = Vector2(200, 800)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0crlx"]
-size = Vector2(334, 388)
-
-[node name="ZoomedOut" type="Control"]
+[node name="ZoomedOut" type="Control" unique_id=451540728]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,35 +12,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Living Room" type="TextureButton" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1304375636]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_n41hs")
+
+[node name="Living Room" type="TextureButton" parent="." unique_id=156847764]
 layout_mode = 0
 offset_left = 887.0
 offset_top = 919.0
 offset_right = 919.0
 offset_bottom = 951.0
-scale = Vector2(5, 5)
+scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("1_a735y")
 script = ExtResource("2_yjs8k")
 scene = "Living Room"
 
-[node name="Coat Hanger" type="TextureButton" parent="."]
+[node name="Coat Hanger" type="Button" parent="." unique_id=153348876]
 layout_mode = 0
-offset_left = 273.0
-offset_top = 152.0
-offset_right = 473.0
-offset_bottom = 952.0
-texture_normal = SubResource("PlaceholderTexture2D_yjs8k")
+offset_left = 90.0
+offset_top = 268.0
+offset_right = 525.0
+offset_bottom = 721.0
+flat = true
 script = ExtResource("2_yjs8k")
 who = "/Hallway"
 scene = "Coat Hanger"
 
-[node name="Table" type="TextureButton" parent="."]
+[node name="Table" type="Button" parent="." unique_id=1272282493]
 layout_mode = 0
-offset_left = 1324.0
-offset_top = 600.0
-offset_right = 1658.0
-offset_bottom = 988.0
-texture_normal = SubResource("PlaceholderTexture2D_0crlx")
+offset_left = 1224.0
+offset_top = 595.0
+offset_right = 1697.0
+offset_bottom = 1015.0
+flat = true
 script = ExtResource("2_yjs8k")
 who = "/Hallway"
 scene = "Table"

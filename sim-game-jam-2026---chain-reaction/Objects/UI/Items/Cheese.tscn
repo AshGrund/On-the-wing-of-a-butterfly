@@ -1,14 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuib6gyl4st6d"]
+[gd_scene format=3 uid="uid://cuib6gyl4st6d"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gpjyt"]
-size = Vector2(150, 150)
+[ext_resource type="Texture2D" uid="uid://b1fo0gpa04yw7" path="res://Textures/UI/Items/Cheese.png" id="1_27p4p"]
 
-[node name="Cheese" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_gpjyt")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 152.0
-offset_bottom = 43.0
-theme_override_font_sizes/normal_font_size = 29
-text = "Cheese
-"
+[node name="Cheese" type="TextureRect" unique_id=968829656]
+texture = ExtResource("1_27p4p")

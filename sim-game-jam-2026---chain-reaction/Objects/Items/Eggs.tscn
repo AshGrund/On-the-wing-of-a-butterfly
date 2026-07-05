@@ -1,19 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://da0kpwvx70w7p"]
+[gd_scene format=3 uid="uid://da0kpwvx70w7p"]
 
 [ext_resource type="Script" uid="uid://bmb6shep20lv0" path="res://Scripts/Buttons/Pick Up Button.gd" id="1_cffs5"]
+[ext_resource type="Texture2D" uid="uid://doketr6ygyf8m" path="res://Textures/Objects/Eggs.png" id="1_x2mxj"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cffs5"]
-size = Vector2(200, 100)
-
-[node name="Eggs" type="TextureButton"]
+[node name="Eggs" type="TextureButton" unique_id=1177309572]
 offset_right = 200.0
 offset_bottom = 100.0
-texture_normal = SubResource("PlaceholderTexture2D_cffs5")
+texture_normal = ExtResource("1_x2mxj")
 script = ExtResource("1_cffs5")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 69.0
-offset_bottom = 32.0
-theme_override_font_sizes/normal_font_size = 27
-text = "Eggs"
-fit_content = true

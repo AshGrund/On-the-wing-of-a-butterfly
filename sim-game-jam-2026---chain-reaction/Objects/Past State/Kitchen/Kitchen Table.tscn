@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://kqkbvvwxkkhk"]
+[gd_scene format=3 uid="uid://kqkbvvwxkkhk"]
 
 [ext_resource type="PackedScene" uid="uid://cw8qnyvstcals" path="res://Objects/UI/Back To Main.tscn" id="1_8gy7r"]
 [ext_resource type="Script" uid="uid://ch48mede0tqt4" path="res://Scripts/Managers/Scene Item Manager.gd" id="1_imffv"]
+[ext_resource type="Texture2D" uid="uid://b1o2x03lrpnc" path="res://Textures/Backgrounds/Table.png" id="2_xoemm"]
 [ext_resource type="PackedScene" uid="uid://pjrde7g3immt" path="res://Objects/Items/Bills.tscn" id="3_wtc1a"]
 [ext_resource type="PackedScene" uid="uid://b6fg5uhpp24v7" path="res://Objects/Items/Bread.tscn" id="4_ahckj"]
 [ext_resource type="PackedScene" uid="uid://bdo2711oqecv1" path="res://Objects/Items/Broken Keys.tscn" id="5_sc8os"]
@@ -14,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b6k2eq43c7lhh" path="res://Objects/Items/Warning.tscn" id="12_6ln6n"]
 [ext_resource type="PackedScene" uid="uid://ccmrc4fwygv5o" path="res://Objects/UI/Place Item Button.tscn" id="13_ahckj"]
 
-[node name="KitchenTable" type="Control"]
+[node name="KitchenTable" type="Control" unique_id=1086372811]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +24,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_imffv")
 
-[node name="BackToMain" parent="." instance=ExtResource("1_8gy7r")]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2003765248]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_xoemm")
+
+[node name="BackToMain" parent="." unique_id=2044481076 instance=ExtResource("1_8gy7r")]
 layout_mode = 0
 offset_left = 832.0
 offset_top = 919.0
@@ -31,7 +38,7 @@ offset_right = 864.0
 offset_bottom = 951.0
 who = "/Kitchen"
 
-[node name="Bills" parent="." instance=ExtResource("3_wtc1a")]
+[node name="Bills" parent="." unique_id=770530808 instance=ExtResource("3_wtc1a")]
 visible = false
 layout_mode = 0
 offset_left = 80.0
@@ -39,7 +46,7 @@ offset_top = 140.0
 offset_right = 222.0
 offset_bottom = 236.0
 
-[node name="Bread" parent="." instance=ExtResource("4_ahckj")]
+[node name="Bread" parent="." unique_id=2030515150 instance=ExtResource("4_ahckj")]
 visible = false
 layout_mode = 0
 offset_left = 1661.0
@@ -47,7 +54,7 @@ offset_top = 702.0
 offset_right = 1861.0
 offset_bottom = 802.0
 
-[node name="Broken Keys" parent="." instance=ExtResource("5_sc8os")]
+[node name="Broken Keys" parent="." unique_id=1427900831 instance=ExtResource("5_sc8os")]
 visible = false
 layout_mode = 0
 offset_left = 1281.0
@@ -55,7 +62,7 @@ offset_top = 219.0
 offset_right = 1327.0
 offset_bottom = 299.0
 
-[node name="Cheese" parent="." instance=ExtResource("6_jhlw0")]
+[node name="Cheese" parent="." unique_id=411626395 instance=ExtResource("6_jhlw0")]
 visible = false
 layout_mode = 0
 offset_left = 539.0
@@ -63,7 +70,7 @@ offset_top = 440.0
 offset_right = 677.0
 offset_bottom = 544.0
 
-[node name="Documents" parent="." instance=ExtResource("7_230hw")]
+[node name="Documents" parent="." unique_id=1059885506 instance=ExtResource("7_230hw")]
 visible = false
 layout_mode = 0
 offset_left = 812.0
@@ -71,7 +78,7 @@ offset_top = 229.0
 offset_right = 954.0
 offset_bottom = 325.0
 
-[node name="Eggs" parent="." instance=ExtResource("8_j8bjv")]
+[node name="Eggs" parent="." unique_id=1793082955 instance=ExtResource("8_j8bjv")]
 visible = false
 layout_mode = 0
 offset_left = 1268.0
@@ -79,7 +86,7 @@ offset_top = 530.0
 offset_right = 1468.0
 offset_bottom = 630.0
 
-[node name="Keys" parent="." instance=ExtResource("9_bt5bk")]
+[node name="Keys" parent="." unique_id=956277418 instance=ExtResource("9_bt5bk")]
 visible = false
 layout_mode = 0
 offset_left = 1109.0
@@ -87,7 +94,7 @@ offset_top = 240.0
 offset_right = 1155.0
 offset_bottom = 320.0
 
-[node name="Notepad" parent="." instance=ExtResource("10_cawcu")]
+[node name="Notepad" parent="." unique_id=842128467 instance=ExtResource("10_cawcu")]
 visible = false
 layout_mode = 0
 offset_left = 736.0
@@ -95,7 +102,7 @@ offset_top = 630.0
 offset_right = 878.0
 offset_bottom = 726.0
 
-[node name="Phone" parent="." instance=ExtResource("11_6p3bi")]
+[node name="Phone" parent="." unique_id=451266957 instance=ExtResource("11_6p3bi")]
 visible = false
 layout_mode = 0
 offset_left = 253.0
@@ -103,7 +110,7 @@ offset_top = 488.0
 offset_right = 353.0
 offset_bottom = 688.0
 
-[node name="Warning" parent="." instance=ExtResource("12_6ln6n")]
+[node name="Warning" parent="." unique_id=1508442383 instance=ExtResource("12_6ln6n")]
 visible = false
 layout_mode = 0
 offset_left = 1561.0
@@ -111,9 +118,9 @@ offset_top = 267.0
 offset_right = 1703.0
 offset_bottom = 363.0
 
-[node name="PlaceItemButton" parent="." instance=ExtResource("13_ahckj")]
+[node name="PlaceItemButton" parent="." unique_id=1474698756 instance=ExtResource("13_ahckj")]
 layout_mode = 0
-offset_left = 1660.0
-offset_top = 1003.0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = 1657.0
+offset_top = 923.0
+offset_right = 1917.0
+offset_bottom = 1000.0

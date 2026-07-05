@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cehs37m4iolge"]
 
 [ext_resource type="Script" uid="uid://clb2ass2dr6k7" path="res://Scripts/Buttons/Scene Change Button.gd" id="1_sc1hi"]
+[ext_resource type="Texture2D" uid="uid://bsaaod02kj2m8" path="res://Textures/Butterfly.png" id="2_i2h3c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_totqd"]
 bg_color = Color(0.695531, 0.791923, 0.892428, 1)
@@ -36,10 +37,10 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0.935784, 0.672668, 0.54208, 1)
+theme_override_colors/default_color = Color(0.94, 0.38853335, 0.1128, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_sc1hi")
 theme_override_font_sizes/normal_font_size = 78
-text = "On the wing of a butterfly"
+text = "On The Wing of a Butterfly"
 fit_content = true
 autowrap_mode = 2
 horizontal_alignment = 1
@@ -61,3 +62,30 @@ text = "Settings"
 script = ExtResource("1_sc1hi")
 who = "/MainMenu"
 scene = "Settings"
+
+[node name="Butterfly" type="Sprite2D" parent="." unique_id=1341757430]
+position = Vector2(1656, 281)
+texture = ExtResource("2_i2h3c")
+
+[node name="Butterfly2" type="Sprite2D" parent="." unique_id=1418966704]
+position = Vector2(1214, 922)
+texture = ExtResource("2_i2h3c")
+
+[node name="Butterfly3" type="Sprite2D" parent="." unique_id=101220780]
+position = Vector2(109, 121)
+texture = ExtResource("2_i2h3c")
+
+[node name="Butterfly4" type="Sprite2D" parent="." unique_id=1556933951]
+position = Vector2(1675, 629)
+texture = ExtResource("2_i2h3c")
+flip_h = true
+
+[node name="Butterfly5" type="Sprite2D" parent="." unique_id=1236801546]
+position = Vector2(706, 173)
+texture = ExtResource("2_i2h3c")
+flip_h = true
+
+[node name="Butterfly6" type="Sprite2D" parent="." unique_id=1342841838]
+position = Vector2(220, 731)
+texture = ExtResource("2_i2h3c")
+flip_h = true

@@ -1,3 +1,101 @@
 [gd_scene format=3 uid="uid://5oeq3grtmei4"]
 
-[node name="Credits" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://428fya3vlb2" path="res://Textures/Butterfly2.png" id="1_ju1cr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgbhe"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xx5t"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Credits" type="Node2D" unique_id=2058551138]
+
+[node name="Panel" type="Panel" parent="." unique_id=1215284288]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rgbhe")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1644850548]
+offset_left = 653.0
+offset_top = 112.0
+offset_right = 1306.0
+offset_bottom = 211.0
+theme_override_font_sizes/normal_font_size = 72
+text = "Congrats, you win!"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=2070484761]
+offset_left = 55.0
+offset_top = 332.0
+offset_right = 755.0
+offset_bottom = 530.0
+theme_override_font_sizes/normal_font_size = 72
+text = "Code by: Ash Grund
+Art by: Ash Grund"
+fit_content = true
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=986971447]
+offset_left = 1591.0
+offset_top = 999.0
+offset_right = 1888.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 44
+text = "Dialog system"
+uri = "https://github.com/nathanhoad/godot_dialogue_manager/blob/main/LICENSE"
+
+[node name="Butterfly2" type="Sprite2D" parent="." unique_id=1481700455]
+position = Vector2(1708, 515)
+skew = 0.017453292
+texture = ExtResource("1_ju1cr")
+flip_h = true
+
+[node name="Butterfly3" type="Sprite2D" parent="." unique_id=989870316]
+position = Vector2(1170, 862.00006)
+scale = Vector2(1, 1.0003046)
+skew = 0.03489852
+texture = ExtResource("1_ju1cr")
+
+[node name="Butterfly4" type="Sprite2D" parent="." unique_id=2055061475]
+position = Vector2(1665, 802)
+scale = Vector2(1, 1.0009131)
+skew = 0.052325368
+texture = ExtResource("1_ju1cr")
+flip_h = true
+
+[node name="Butterfly5" type="Sprite2D" parent="." unique_id=1734372171]
+position = Vector2(1347, 739)
+skew = 0.017453292
+texture = ExtResource("1_ju1cr")
+flip_h = true
+
+[node name="Butterfly6" type="Sprite2D" parent="." unique_id=1965545895]
+position = Vector2(1083, 368)
+skew = 0.017453292
+texture = ExtResource("1_ju1cr")
+flip_h = true
+
+[node name="Butterfly7" type="Sprite2D" parent="." unique_id=373494557]
+position = Vector2(1685, 167)
+skew = 0.017453292
+texture = ExtResource("1_ju1cr")
+
+[node name="Butterfly8" type="Sprite2D" parent="." unique_id=338346448]
+position = Vector2(264, 852)
+skew = 0.017453292
+texture = ExtResource("1_ju1cr")
+
+[node name="Butterfly9" type="Sprite2D" parent="." unique_id=802349644]
+position = Vector2(1480, 579)
+skew = 0.017453292
+texture = ExtResource("1_ju1cr")
+
+[node name="Button" type="Button" parent="." unique_id=1572702620]
+offset_left = 800.0
+offset_top = 907.0
+offset_right = 1152.0
+offset_bottom = 984.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_0xx5t")
+text = "Back to main"
